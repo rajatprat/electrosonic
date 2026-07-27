@@ -17,8 +17,8 @@ export const strengths = [
 export const brands = ["motarola.jpg", "kenwood.png", "lenovo.png", "hollyland.png", "evox.png", "alinco.png", "icom.png", "aspera.png"];
 
 export const testimonials = [
-  ["Pratyaksh", "I bought a walkie talkie from Electrosonic Technologies, and it works very well. The sound is clear, and it is easy to use."],
-  ["Mongear Technologies", "Electrosonic Technologies has great customer service. They answered all my questions quickly. Their walkie talkies are strong and reliable."],
-  ["Greenwell", "I use Electrosonic Technologies walkie talkies at my workplace. The battery lasts a long time, and the signal is always good."],
-  ["Rohit Garg & Company", "I am pleased with Electrosonic Technologies. Their walkie talkies are lightweight and simple to set up."],
+  ["Pratyaksh", "The radios were easy for our team to start using, with clear audio and dependable battery life through the workday."],
+  ["Mongear Technologies", "Electrosonic helped us compare models quickly and answered every technical question before dispatch. The support was responsive."],
+  ["Greenwell", "We needed reliable communication across our workplace. The recommended walkie talkies gave us stable signal and simple daily operation."],
+  ["Rohit Garg & Company", "The team suggested a practical setup instead of overselling. The radios were lightweight, easy to configure, and ready for use."],
 ];

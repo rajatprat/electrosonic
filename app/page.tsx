@@ -168,18 +168,27 @@ export default async function Home() {
       </section>
 
       <section className="testimonials section">
-        <p className="eyebrow center">Customer notes</p>
-        <h2 className="center">Trusted guidance, proven in the field.</h2>
-        <p className="section-intro center">
-          Teams choose Electrosonic when they need radios that are easy to deploy, clear in daily use, and supported
-          by people who understand site communication.
-        </p>
+        <div className="testimonial-head">
+          <div>
+            <p className="eyebrow">Field feedback</p>
+            <h2>Customers value clear advice before and after the purchase.</h2>
+          </div>
+          <p>
+            From product selection to setup support, these notes reflect what teams usually need most: practical
+            recommendations, reliable radios, and quick answers when work is moving.
+          </p>
+        </div>
         <div className="testimonial-grid">
           {testimonials.map(([name, quote]) => (
             <article key={name} className="testimonial">
               <p>{quote}</p>
-              <span>★★★★★</span>
-              <strong>{name}</strong>
+              <div className="testimonial-author">
+                <span>{name.slice(0, 1)}</span>
+                <div>
+                  <strong>{name}</strong>
+                  <small>Verified customer</small>
+                </div>
+              </div>
             </article>
           ))}
         </div>

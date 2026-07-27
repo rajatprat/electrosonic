@@ -670,22 +670,55 @@ footer button {
   position: relative;
 }
 
+.testimonial-head {
+  align-items: end;
+  display: grid;
+  gap: 28px;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.58fr);
+}
+
+.testimonial-head h2 {
+  max-width: 860px;
+}
+
+.testimonial-head > p {
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.75;
+}
+
 .testimonial-grid {
   display: grid;
   gap: 22px;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  margin-top: 40px;
+  margin-top: 34px;
 }
 
 .testimonial {
+  border-top: 6px solid var(--teal);
   background:
     linear-gradient(180deg, #ffffff 0%, #f9fcfd 100%);
   border: 1px solid #d8e7ef;
+  border-top-color: var(--teal);
   border-radius: 8px;
   box-shadow: 0 18px 48px rgba(18, 35, 54, 0.08);
-  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  min-height: 320px;
   padding: 30px;
   position: relative;
+}
+
+.testimonial:nth-child(2) {
+  border-top-color: var(--red);
+}
+
+.testimonial:nth-child(3) {
+  border-top-color: var(--blue);
+}
+
+.testimonial:nth-child(4) {
+  border-top-color: #f7b731;
 }
 
 .testimonial::before {
@@ -701,24 +734,50 @@ footer button {
 
 .testimonial p {
   color: #3d4c5d;
+  flex: 1;
   font-size: 17px;
   line-height: 1.72;
   position: relative;
   z-index: 1;
 }
 
-.testimonial span {
-  color: #f7b731;
-  display: block;
-  letter-spacing: 2px;
-  margin: 22px 0 12px;
+.testimonial-author {
+  align-items: center;
+  border-top: 1px solid #e1edf3;
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+  padding-top: 18px;
+  position: relative;
+  z-index: 1;
+}
+
+.testimonial-author > span {
+  align-items: center;
+  background: #101b2b;
+  border-radius: 50%;
+  color: #aeeaf0;
+  display: inline-flex;
+  flex: 0 0 auto;
+  font-size: 18px;
+  font-weight: 900;
+  height: 44px;
+  justify-content: center;
+  width: 44px;
 }
 
 .testimonial strong {
   color: var(--navy);
   display: block;
-  font-size: 18px;
-  margin-top: 8px;
+  font-size: 17px;
+}
+
+.testimonial small {
+  color: #6f7d89;
+  display: block;
+  font-size: 13px;
+  font-weight: 800;
+  margin-top: 3px;
 }
 
 .inquiry {
@@ -1463,6 +1522,7 @@ footer p {
   .brand-panel,
   .dark-form,
   .footer-cta,
+  .testimonial-head,
   .service-grid,
   .contact-layout,
   .office-grid,
