@@ -222,7 +222,9 @@ type WordPressPost = {
   };
 };
 
-const wordpressApiBase = process.env.WORDPRESS_API_BASE || process.env.NEXT_PUBLIC_WORDPRESS_API_BASE || "";
+const temporaryEvoxBlogApiBase = "https://public-api.wordpress.com/wp/v2/sites/evoxindia.wordpress.com/posts";
+const wordpressApiBase =
+  process.env.WORDPRESS_API_BASE || process.env.NEXT_PUBLIC_WORDPRESS_API_BASE || temporaryEvoxBlogApiBase;
 
 function stripHtml(value = "") {
   return value
