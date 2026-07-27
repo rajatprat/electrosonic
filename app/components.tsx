@@ -56,11 +56,25 @@ export function InquiryForm({ dark = false }: { dark?: boolean }) {
 export function BrandStrip() {
   return (
     <section className="brands section">
-      <h2 className="center">Top Brands</h2>
+      <div className="brands-head">
+        <div>
+          <p className="eyebrow">Brand ecosystem</p>
+          <h2>Top communication brands, selected for real sites.</h2>
+        </div>
+        <p>
+          Motorola, Kenwood, Icom, Aspera, and specialist radio partners brought together for practical comparison,
+          supply, and after-sales guidance.
+        </p>
+      </div>
       <div className="brand-strip">
         {brands.concat(brands).map((brand, index) => (
           <img key={`${brand}-${index}`} src={`/images/brands/${brand}`} alt="" width={138} height={78} />
         ))}
+      </div>
+      <div className="brand-note">
+        <span>Multi-brand catalog</span>
+        <span>Product shortlisting</span>
+        <span>Deployment support</span>
       </div>
     </section>
   );

@@ -169,7 +169,11 @@ export default async function Home() {
 
       <section className="testimonials section">
         <p className="eyebrow center">Customer notes</p>
-        <h2 className="center">People come back for reliable guidance.</h2>
+        <h2 className="center">Trusted guidance, proven in the field.</h2>
+        <p className="section-intro center">
+          Teams choose Electrosonic when they need radios that are easy to deploy, clear in daily use, and supported
+          by people who understand site communication.
+        </p>
         <div className="testimonial-grid">
           {testimonials.map(([name, quote]) => (
             <article key={name} className="testimonial">
