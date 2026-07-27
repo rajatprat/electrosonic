@@ -1882,6 +1882,126 @@ footer p {
   margin-bottom: 8px;
 }
 
+.contact-intro {
+  align-items: end;
+  background: #ffffff;
+  display: grid;
+  gap: 28px;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.58fr);
+  padding-bottom: clamp(34px, 5vw, 62px);
+}
+
+.contact-intro h2 {
+  max-width: 900px;
+}
+
+.contact-intro > p {
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.75;
+}
+
+.contact-hub {
+  align-items: flex-start;
+  background:
+    radial-gradient(circle at 88% 0%, rgba(18, 185, 200, 0.14), transparent 28%),
+    #eef6fa;
+  display: grid;
+  gap: 34px;
+  grid-template-columns: minmax(0, 1fr) minmax(380px, 0.62fr);
+  padding-top: clamp(34px, 5vw, 62px);
+}
+
+.contact-hub .office-grid {
+  display: grid;
+  gap: 22px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.contact-hub .office-grid article {
+  background:
+    linear-gradient(180deg, #ffffff 0%, #f8fcfd 100%);
+  border: 1px solid #d8e7ef;
+  border-radius: 8px;
+  box-shadow: 0 18px 48px rgba(18, 35, 54, 0.08);
+  min-height: 390px;
+  padding: 30px;
+}
+
+.contact-hub .office-grid article > span {
+  color: var(--teal);
+  display: block;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  margin-bottom: 34px;
+}
+
+.contact-hub .office-grid h2 {
+  color: var(--navy);
+  font-size: 32px;
+  margin-bottom: 14px;
+}
+
+.contact-hub .office-grid p {
+  color: var(--muted);
+  line-height: 1.75;
+  margin-bottom: 22px;
+}
+
+.contact-hub .office-grid a {
+  color: var(--blue);
+  display: block;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+.contact-form-panel {
+  position: sticky;
+  top: 110px;
+}
+
+.contact-form-panel .inquiry-card {
+  box-shadow: 0 24px 70px rgba(18, 35, 54, 0.12);
+  margin-left: 0;
+  max-width: none;
+}
+
+.contact-quick {
+  background: #101b2b;
+  display: grid;
+  gap: 1px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  padding-bottom: clamp(38px, 5vw, 64px);
+  padding-top: clamp(38px, 5vw, 64px);
+}
+
+.contact-quick article {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  color: white;
+  min-height: 138px;
+  padding: 26px;
+}
+
+.contact-quick span {
+  color: #aeeaf0;
+  display: block;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+
+.contact-quick a,
+.contact-quick strong {
+  color: white;
+  font-size: clamp(20px, 2vw, 28px);
+  font-weight: 900;
+}
+
 .product-hero {
   align-items: center;
   display: grid;
@@ -2017,6 +2137,9 @@ footer p {
   .service-flow,
   .service-flow-grid,
   .service-support,
+  .contact-intro,
+  .contact-hub,
+  .contact-quick,
   .brands-head,
   .brand-panel,
   .dark-form,
@@ -2038,7 +2161,8 @@ footer p {
   }
 
   .filters,
-  .product-detail-body aside {
+  .product-detail-body aside,
+  .contact-form-panel {
     position: static;
   }
 
@@ -2056,6 +2180,10 @@ footer p {
 
   .footer-cta .text-button {
     width: fit-content;
+  }
+
+  .contact-hub .office-grid {
+    grid-template-columns: 1fr;
   }
 }
 
