@@ -159,7 +159,7 @@ export default function Home() {
               </div>
               <h3>{post.title}</h3>
               <p>{post.excerpt}</p>
-              <a href={`/blog/${post.slug}/`}>Read article</a>
+              <a href={`/blog/${post.slug}/`}>Read more</a>
             </article>
           ))}
         </div>
