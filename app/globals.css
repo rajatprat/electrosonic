@@ -613,6 +613,41 @@ footer button {
   line-height: 1.8;
 }
 
+.wordpress-content h2,
+.wordpress-content h3,
+.wordpress-content h4 {
+  color: var(--navy);
+  margin: 34px 0 14px;
+}
+
+.wordpress-content p,
+.wordpress-content li {
+  color: var(--muted);
+  font-size: 19px;
+  line-height: 1.8;
+}
+
+.wordpress-content p {
+  margin-bottom: 20px;
+}
+
+.wordpress-content ul,
+.wordpress-content ol {
+  margin: 0 0 24px 24px;
+}
+
+.wordpress-content a {
+  color: var(--blue);
+  font-weight: 800;
+}
+
+.wordpress-content img {
+  border-radius: 8px;
+  height: auto;
+  margin: 28px 0;
+  max-width: 100%;
+}
+
 .article-cta {
   background: white;
   border: 1px solid var(--line);

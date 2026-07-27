@@ -1,7 +1,9 @@
 import { Footer, Header } from "../components";
-import { blogPosts } from "../blog-data";
+import { getBlogPosts } from "../blog-data";
 
-export default function BlogPage() {
+export default async function BlogPage() {
+  const blogPosts = await getBlogPosts();
+
   return (
     <main>
       <Header />

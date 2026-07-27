@@ -6,6 +6,7 @@ export type BlogPost = {
   readTime: string;
   excerpt: string;
   image: string;
+  contentHtml?: string;
   sections: Array<{
     heading: string;
     body: string;
@@ -179,4 +180,105 @@ export const blogPosts: BlogPost[] = [
 
 export function getBlogPost(slug: string) {
   return blogPosts.find((post) => post.slug === slug);
+}
+
+type WordPressPost = {
+  slug: string;
+  title?: { rendered?: string };
+  excerpt?: { rendered?: string };
+  content?: { rendered?: string };
+  date?: string;
+  _embedded?: {
+    "wp:featuredmedia"?: Array<{
+      source_url?: string;
+    }>;
+    "wp:term"?: Array<Array<{
+      name?: string;
+      taxonomy?: string;
+    }>>;
+  };
+};
+
+const wordpressApiBase = process.env.WORDPRESS_API_BASE || process.env.NEXT_PUBLIC_WORDPRESS_API_BASE || "";
+
+function stripHtml(value = "") {
+  return value
+    .replace(/<style[\s\S]*?<\/style>/gi, "")
+    .replace(/<script[\s\S]*?<\/script>/gi, "")
+    .replace(/<[^>]*>/g, " ")
+    .replace(/&nbsp;/g, " ")
+    .replace(/&amp;/g, "&")
+    .replace(/&#8217;/g, "'")
+    .replace(/&#8220;|&#8221;/g, '"')
+    .replace(/&#8211;|&#8212;/g, "-")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function formatDate(value?: string) {
+  if (!value) return "";
+
+  return new Intl.DateTimeFormat("en-GB", {
+    day: "2-digit",
+    month: "short",
+    year: "numeric",
+  }).format(new Date(value));
+}
+
+function getCategory(post: WordPressPost) {
+  const terms = post._embedded?.["wp:term"]?.flat() || [];
+  return terms.find((term) => term.taxonomy === "category")?.name || "Journal";
+}
+
+function getFeaturedImage(post: WordPressPost) {
+  return post._embedded?.["wp:featuredmedia"]?.[0]?.source_url || "/images/sec2-rt-img-transparent.png";
+}
+
+function estimateReadTime(content: string) {
+  const words = stripHtml(content).split(" ").filter(Boolean).length;
+  return `${Math.max(1, Math.ceil(words / 220))} min read`;
+}
+
+function mapWordPressPost(post: WordPressPost): BlogPost {
+  const contentHtml = post.content?.rendered || "";
+  const title = stripHtml(post.title?.rendered);
+
+  return {
+    slug: post.slug,
+    title,
+    category: getCategory(post),
+    date: formatDate(post.date),
+    readTime: estimateReadTime(contentHtml),
+    excerpt: stripHtml(post.excerpt?.rendered).slice(0, 180),
+    image: getFeaturedImage(post),
+    contentHtml,
+    sections: [],
+  };
+}
+
+export async function getBlogPosts(): Promise<BlogPost[]> {
+  if (!wordpressApiBase) {
+    return blogPosts;
+  }
+
+  try {
+    const separator = wordpressApiBase.includes("?") ? "&" : "?";
+    const response = await fetch(`${wordpressApiBase}${separator}_embed=1&per_page=12`, {
+      next: { revalidate: 300 },
+    });
+
+    if (!response.ok) {
+      return blogPosts;
+    }
+
+    const posts = (await response.json()) as WordPressPost[];
+    return posts.length ? posts.map(mapWordPressPost) : blogPosts;
+  } catch {
+    return blogPosts;
+  }
+}
+
+export async function getBlogPostBySlug(slug: string): Promise<BlogPost | undefined> {
+  const posts = await getBlogPosts();
+  return posts.find((post) => post.slug === slug);
 }

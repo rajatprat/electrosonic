@@ -1,6 +1,6 @@
 import { BrandStrip, Footer, Header, InquiryForm } from "./components";
 import { products, strengths, testimonials } from "./site-data";
-import { blogPosts } from "./blog-data";
+import { getBlogPosts } from "./blog-data";
 
 const stats = [
   ["20+", "Curated radio models"],
@@ -15,7 +15,9 @@ const workflows = [
   ["03", "Deploy and support", "Your team gets practical guidance, configuration support, and responsive follow-up."],
 ];
 
-export default function Home() {
+export default async function Home() {
+  const blogPosts = await getBlogPosts();
+
   return (
     <main>
       <Header />

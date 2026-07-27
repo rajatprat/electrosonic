@@ -18,6 +18,18 @@ npm run build
 
 This starter does not use `wrangler.jsonc`.
 
+## WordPress Blog Source
+
+Blog pages read from WordPress.com when a REST API endpoint is configured:
+
+```bash
+WORDPRESS_API_BASE="https://public-api.wordpress.com/wp/v2/sites/YOUR_SITE.wordpress.com/posts"
+NEXT_PUBLIC_WORDPRESS_API_BASE="https://public-api.wordpress.com/wp/v2/sites/YOUR_SITE.wordpress.com/posts"
+```
+
+If the variable is missing or WordPress is unavailable, the site falls back to
+the local posts in `app/blog-data.ts`.
+
 ## Included Shape
 
 - edit site code under `app/`

@@ -1,14 +1,15 @@
 import { notFound } from "next/navigation";
 import { Footer, Header } from "../../components";
-import { blogPosts, getBlogPost } from "../../blog-data";
+import { getBlogPostBySlug, getBlogPosts } from "../../blog-data";
 
-export function generateStaticParams() {
+export async function generateStaticParams() {
+  const blogPosts = await getBlogPosts();
   return blogPosts.map((post) => ({ slug: post.slug }));
 }
 
 export default async function BlogArticlePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const post = getBlogPost(slug);
+  const post = await getBlogPostBySlug(slug);
 
   if (!post) {
     notFound();
@@ -28,12 +29,16 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
         <img className="article-image" src={post.image} alt="" />
 
         <div className="article-body">
-          {post.sections.map((section) => (
-            <section key={section.heading}>
-              <h2>{section.heading}</h2>
-              <p>{section.body}</p>
-            </section>
-          ))}
+          {post.contentHtml ? (
+            <div className="wordpress-content" dangerouslySetInnerHTML={{ __html: post.contentHtml }} />
+          ) : (
+            post.sections.map((section) => (
+              <section key={section.heading}>
+                <h2>{section.heading}</h2>
+                <p>{section.body}</p>
+              </section>
+            ))
+          )}
           <div className="article-cta">
             <h2>Need help choosing?</h2>
             <p>Share your site type, team size, and coverage needs. Electrosonic can help shortlist the right radios.</p>
