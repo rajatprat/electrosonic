@@ -67,8 +67,8 @@ export function BrandStrip() {
         </p>
       </div>
       <div className="brand-strip">
-        {brands.concat(brands).map((brand, index) => (
-          <img key={`${brand}-${index}`} src={`/images/brands/${brand}`} alt="" width={138} height={78} />
+        {brands.map((brand) => (
+          <img key={brand} src={`/images/brands/${brand}`} alt="" width={138} height={78} />
         ))}
       </div>
       <div className="brand-note">
