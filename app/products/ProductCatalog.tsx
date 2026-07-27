@@ -116,7 +116,7 @@ export function ProductCatalog({ products }: { products: AsperaProduct[] }) {
   return (
     <section className="shop section">
       <aside className="filters">
-        <h3>Search</h3>
+        <h3>Find radios</h3>
         <div className="search-row">
           <input
             placeholder="Search for products"
@@ -130,7 +130,7 @@ export function ProductCatalog({ products }: { products: AsperaProduct[] }) {
           <button type="button" onClick={() => setPage(1)}>Search</button>
         </div>
 
-        <h3>Brand</h3>
+        <h3>Brands</h3>
         <div className="checkbox-list" aria-label="Brand filters">
           {brands.map((item) => (
             <label key={item}>
@@ -151,12 +151,12 @@ export function ProductCatalog({ products }: { products: AsperaProduct[] }) {
           ))}
         </div>
 
-        <h3>Technology</h3>
+        <h3>Radio type</h3>
         <select aria-label="Technology" value={technology} onChange={(event) => { setTechnology(event.target.value); setPage(1); }}>
           {technologies.map((item) => <option key={item}>{item}</option>)}
         </select>
 
-        <button type="button" className="reset-button" onClick={resetFilters}>Reset filters</button>
+        <button type="button" className="reset-button" onClick={resetFilters}>Clear selection</button>
       </aside>
 
       <div className="listing" id="product-results">
