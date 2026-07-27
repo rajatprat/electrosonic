@@ -1,10 +1,10 @@
 export const products = [
-  ["Digital Radio", "Digital radios can screen out background noise.", "/images/products/diigital-radio.png"],
-  ["Analogue Radio", "Analog radio is the traditional type of radio.", "/images/products/analogue-radio.png"],
-  ["License Free Radio", "License is not required for these radios.", "/images/products/license-free-radio.png"],
-  ["POC Radio", "POC radio offers instantaneous communication.", "/images/products/poc-radio.png"],
-  ["Wifi Radio", "Reliable wireless radio communication for modern teams.", "/images/products/wifi-radio.png"],
-  ["Amateur Radio (HAM)", "Ham radio is the use of radio frequency spectrum.", null],
+  ["Digital Radio", "Digital radios can screen out background noise.", "/images/category-icons/digital-radio.png"],
+  ["Analogue Radio", "Analog radio is the traditional type of radio.", "/images/category-icons/analogue-radio.png"],
+  ["License Free Radio", "License is not required for these radios.", "/images/category-icons/license-free-radio.png"],
+  ["POC Radio", "POC radio offers instantaneous communication.", "/images/category-icons/poc-radio.png"],
+  ["Wifi Radio", "Reliable wireless radio communication for modern teams.", "/images/category-icons/wifi-radio.png"],
+  ["Amateur Radio (HAM)", "Ham radio is the use of radio frequency spectrum.", "/images/category-icons/ham-radio.png"],
 ];
 
 export const strengths = [

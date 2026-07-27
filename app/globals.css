@@ -461,7 +461,7 @@ footer button {
 }
 
 .product-card {
-  align-items: center;
+  align-items: stretch;
   background:
     linear-gradient(180deg, #ffffff 0%, #f8fcfd 100%);
   border: 1px solid var(--line);
@@ -469,8 +469,8 @@ footer button {
   box-shadow: 0 16px 42px rgba(31, 47, 70, 0.08);
   display: grid;
   gap: 18px;
-  grid-template-columns: 112px 1fr;
-  min-height: 176px;
+  grid-template-columns: 150px 1fr;
+  min-height: 190px;
   padding: 24px;
   position: relative;
   transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
@@ -496,12 +496,11 @@ footer button {
 }
 
 .product-card img {
-  background: #eef6fa;
   border-radius: 8px;
-  height: 112px;
-  object-fit: contain;
-  padding: 14px;
-  width: 112px;
+  height: 142px;
+  object-fit: cover;
+  object-position: center;
+  width: 150px;
 }
 
 .product-fallback {
@@ -512,10 +511,10 @@ footer button {
   display: flex;
   font-size: 30px;
   font-weight: 800;
-  height: 112px;
+  height: 142px;
   justify-content: center;
   letter-spacing: 0;
-  width: 112px;
+  width: 150px;
 }
 
 .product-card h3 {
