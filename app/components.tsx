@@ -59,17 +59,27 @@ export function BrandStrip() {
       <div className="brands-head">
         <div>
           <p className="eyebrow">Brand ecosystem</p>
-          <h2>Top communication brands, selected for real sites.</h2>
+          <h2>One place to compare the radio brands teams actually use.</h2>
         </div>
         <p>
           Motorola, Kenwood, Icom, Aspera, and specialist radio partners brought together for practical comparison,
           supply, and after-sales guidance.
         </p>
       </div>
-      <div className="brand-strip">
-        {brands.map((brand) => (
-          <img key={brand} src={`/images/brands/${brand}`} alt="" width={138} height={78} />
-        ))}
+      <div className="brand-panel">
+        <div className="brand-panel-copy">
+          <span>08</span>
+          <h3>Specialist partner brands</h3>
+          <p>
+            We help shortlist the right mix across license-free radios, digital systems, repeaters, aviation radios,
+            PoC devices, and accessories.
+          </p>
+        </div>
+        <div className="brand-strip">
+          {brands.map((brand) => (
+            <img key={brand} src={`/images/brands/${brand}`} alt="" width={138} height={78} />
+          ))}
+        </div>
       </div>
       <div className="brand-note">
         <span>Multi-brand catalog</span>

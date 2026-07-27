@@ -771,8 +771,7 @@ textarea {
 
 .brands {
   background:
-    radial-gradient(circle at 85% 0%, rgba(18, 185, 200, 0.15), transparent 26%),
-    #ffffff;
+    linear-gradient(180deg, #ffffff 0%, #f3f8fb 100%);
   overflow: hidden;
 }
 
@@ -794,17 +793,53 @@ textarea {
   line-height: 1.75;
 }
 
-.brand-strip {
-  align-items: center;
+.brand-panel {
   background: #101b2b;
   border: 1px solid rgba(18, 185, 200, 0.2);
   border-radius: 8px;
   box-shadow: 0 24px 70px rgba(16, 27, 43, 0.14);
   display: grid;
   gap: 1px;
-  grid-template-columns: repeat(8, minmax(100px, 1fr));
+  grid-template-columns: minmax(260px, 0.45fr) minmax(0, 1fr);
   overflow: hidden;
-  padding: 1px;
+}
+
+.brand-panel-copy {
+  background:
+    radial-gradient(circle at 84% 18%, rgba(18, 185, 200, 0.22), transparent 34%),
+    #101b2b;
+  color: white;
+  min-height: 260px;
+  padding: clamp(28px, 4vw, 46px);
+}
+
+.brand-panel-copy span {
+  color: #aeeaf0;
+  display: block;
+  font-size: clamp(54px, 6vw, 88px);
+  font-weight: 900;
+  line-height: 0.9;
+  margin-bottom: 26px;
+}
+
+.brand-panel-copy h3 {
+  color: white;
+  font-size: clamp(26px, 2.6vw, 38px);
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+
+.brand-panel-copy p {
+  color: rgba(255, 255, 255, 0.74);
+  line-height: 1.75;
+  max-width: 430px;
+}
+
+.brand-strip {
+  align-items: stretch;
+  display: grid;
+  gap: 1px;
+  grid-template-columns: repeat(4, minmax(120px, 1fr));
 }
 
 .brand-strip img {
@@ -812,9 +847,9 @@ textarea {
     linear-gradient(180deg, #ffffff 0%, #f3f8fb 100%);
   border: 0;
   border-radius: 0;
-  height: 96px;
+  height: 130px;
   object-fit: contain;
-  padding: 18px;
+  padding: 24px;
   transition: filter 180ms ease, transform 180ms ease;
   width: 100%;
 }
@@ -1319,6 +1354,7 @@ footer p {
   .catalog-grid,
   .blog-grid,
   .brands-head,
+  .brand-panel,
   .service-grid,
   .contact-layout,
   .office-grid,
@@ -1341,6 +1377,10 @@ footer p {
 
   .brand-strip {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .brand-panel-copy {
+    min-height: auto;
   }
 }
 
@@ -1380,6 +1420,11 @@ footer p {
 
   .brand-strip {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .brand-strip img {
+    height: 112px;
+    padding: 18px;
   }
 
   .listing-top,
