@@ -87,7 +87,7 @@ export default async function Home() {
         <div className="section-heading-row">
           <div>
             <p className="eyebrow">Why teams choose us</p>
-            <h2>Quietly rigorous. Fast when it matters.</h2>
+            <h2>Radio advice grounded in real site conditions.</h2>
           </div>
           <a className="outline-button light-outline" href="/services/">View services</a>
         </div>

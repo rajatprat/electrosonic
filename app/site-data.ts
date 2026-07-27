@@ -8,10 +8,10 @@ export const products = [
 ];
 
 export const strengths = [
-  ["Our Quality", "We never compromise in quality. We have been providing superior quality products for decades.", "/images/why-choose-us/icon-quaity.png"],
-  ["Our Vision", "We make growth partners. We want to excel in telecommunication by providing every kind of service to society.", "/images/why-choose-us/icon-vision.png"],
-  ["Our Mission", "Electrosonic believes customer satisfaction is key to growth. We try to give more than we commit.", "/images/why-choose-us/icon-mission.png"],
-  ["Our Values", "Sincerity, courage and commitment guide how we serve every customer and every communication need.", "/images/why-choose-us/icon-values.png"],
+  ["Coverage-first guidance", "We start with your floors, basements, yards, routes, and team size before recommending any radio model.", "/images/why-choose-us/icon-quaity.png"],
+  ["Multi-brand comparison", "Motorola, Kenwood, Icom, Aspera, Vertel, and other options are compared by fit, not just by brochure specs.", "/images/why-choose-us/icon-vision.png"],
+  ["Ready-to-use setup", "We help with configuration, channels, accessories, chargers, and practical deployment details for daily use.", "/images/why-choose-us/icon-mission.png"],
+  ["Responsive support", "From first shortlist to after-sales questions, our team stays reachable when your communication setup matters.", "/images/why-choose-us/icon-values.png"],
 ];
 
 export const brands = ["motarola.jpg", "kenwood.png", "lenovo.png", "hollyland.png", "evox.png", "alinco.png", "icom.png", "aspera.png"];

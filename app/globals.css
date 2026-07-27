@@ -361,20 +361,33 @@ footer button {
 
 .why-grid {
   display: grid;
-  gap: 26px;
+  gap: 18px;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   margin-top: 42px;
 }
 
 .why-item {
   align-items: flex-start;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.055));
+  border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 8px;
   display: flex;
   gap: 22px;
-  min-height: 150px;
+  min-height: 178px;
   padding: 24px;
+  position: relative;
+}
+
+.why-item::after {
+  background: rgba(174, 234, 240, 0.85);
+  border-radius: 999px;
+  content: "";
+  height: 5px;
+  left: 24px;
+  position: absolute;
+  right: 24px;
+  top: 0;
 }
 
 .why-item h3 {
@@ -385,6 +398,12 @@ footer button {
 
 .why-item p {
   color: rgba(255, 255, 255, 0.78);
+}
+
+.why-item img {
+  background: rgba(255, 255, 255, 0.09);
+  border-radius: 8px;
+  padding: 10px;
 }
 
 .center {
