@@ -60,14 +60,18 @@ export default async function Home() {
       </section>
 
       <section className="about section redesign-about">
-        <div>
-          <p className="eyebrow">Built around practical communication</p>
-          <h2>Products, advice, and service in one place.</h2>
+        <div className="about-copy">
+          <p className="eyebrow">Practical radio consultation</p>
+          <h2>Choose equipment that fits your site, not just a spec sheet.</h2>
           <p>
-            We bring together proven radios, honest product guidance, and responsive support for teams that depend on
-            voice communication every day. From license-free radios to professional MOTOTRBO, Kenwood, Icom, Aspera,
-            and Vertel options, the catalog is organized to help you decide faster.
+            Electrosonic helps teams compare the right communication setup for real working conditions: floors,
+            basements, loading bays, security routes, events, campuses, and industrial areas.
           </p>
+          <div className="about-proof">
+            <span>Multi-brand supply</span>
+            <span>Coverage-led recommendations</span>
+            <span>After-sales support</span>
+          </div>
           <a className="text-button" href="/aboutus/">About Electrosonic</a>
         </div>
         <div className="about-media">

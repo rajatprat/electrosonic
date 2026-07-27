@@ -235,6 +235,33 @@ footer p {
   margin-top: 22px;
 }
 
+.about-copy h2 {
+  max-width: 780px;
+}
+
+.about-copy p:not(.eyebrow) {
+  color: #4d5d70;
+  font-size: clamp(17px, 1.5vw, 21px);
+  max-width: 720px;
+}
+
+.about-proof {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 26px;
+}
+
+.about-proof span {
+  background: #eef6fa;
+  border: 1px solid #d8ebf1;
+  border-radius: 999px;
+  color: #173246;
+  font-size: 13px;
+  font-weight: 900;
+  padding: 10px 14px;
+}
+
 .about > img {
   border-radius: 8px;
   box-shadow: var(--shadow);
