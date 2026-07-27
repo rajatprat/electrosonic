@@ -1,10 +1,10 @@
 export const products = [
-  ["Digital Radio", "Digital radios can screen out background noise.", "/images/category-icons/digital-radio.png"],
-  ["Analogue Radio", "Analog radio is the traditional type of radio.", "/images/category-icons/analogue-radio.png"],
-  ["License Free Radio", "License is not required for these radios.", "/images/category-icons/license-free-radio.png"],
-  ["POC Radio", "POC radio offers instantaneous communication.", "/images/category-icons/poc-radio.png"],
-  ["Wifi Radio", "Reliable wireless radio communication for modern teams.", "/images/category-icons/wifi-radio.png"],
-  ["Amateur Radio (HAM)", "Ham radio is the use of radio frequency spectrum.", "/images/category-icons/ham-radio.png"],
+  ["Digital Radio", "Clear voice, stronger privacy, better battery performance, and smarter team control for security, industrial, hospitality, and operations teams.", "/images/category-icons/digital-radio.png"],
+  ["Analogue Radio", "Simple, familiar two-way communication for teams that need dependable push-to-talk calling without complex setup or infrastructure.", "/images/category-icons/analogue-radio.png"],
+  ["License Free Radio", "PMR446-style radios for hotels, schools, malls, events, and small teams that need quick communication without frequency licensing work.", "/images/category-icons/license-free-radio.png"],
+  ["POC Radio", "Push-to-talk over cellular for wide-area teams that need instant voice communication across branches, cities, routes, or field operations.", "/images/category-icons/poc-radio.png"],
+  ["Wifi Radio", "Useful for modern sites where teams need radio-style calling over available network coverage, especially across connected buildings or campuses.", "/images/category-icons/wifi-radio.png"],
+  ["Amateur Radio (HAM)", "HAM and specialist radio options for enthusiasts, technical users, emergency communication planning, and advanced radio learning.", "/images/category-icons/ham-radio.png"],
 ];
 
 export const strengths = [
