@@ -6,30 +6,6 @@ import type { AsperaProduct } from "../aspera-products";
 type CatalogProduct = AsperaProduct & {
   brand: string;
   technology: string;
-  price: number;
-};
-
-const priceBySlug: Record<string, number> = {
-  "kenwood-tk-3501": 11000,
-  "vertel-team-talky": 4500,
-  "aspera-v7": 8500,
-  "aspera-victor": 6500,
-  "aspera-v9": 9500,
-  "aspera-vista": 12500,
-  "aspera-ad90": 14500,
-  "aspera-ip-360s": 22000,
-  "kenwood-nx-1200-1300": 28000,
-  "kenwood-nx-1700-1800": 42000,
-  "kenwood-nxr-1700-1800": 90000,
-  "motorola-r2": 24000,
-  "motorola-r5": 52000,
-  "motorola-r7": 85000,
-  "motorola-tlk-150": 68000,
-  "motorola-slr5300": 180000,
-  "motorola-xir-p8600ex": 125000,
-  "motorola-xir-m8660-m8668": 72000,
-  "icom-ic-a25n-a25c": 65000,
-  "icom-ic-a220": 150000,
 };
 
 function brandFromSlug(slug: string) {
@@ -58,7 +34,6 @@ export function ProductCatalog({ products }: { products: AsperaProduct[] }) {
         ...product,
         brand: brandFromSlug(product.slug),
         technology: technologyFor(product),
-        price: priceBySlug[product.slug] ?? 25000,
       })),
     [products],
   );
