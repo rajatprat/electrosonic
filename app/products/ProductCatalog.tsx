@@ -103,6 +103,7 @@ export function ProductCatalog({ products }: { products: AsperaProduct[] }) {
   const pageCount = Math.max(1, Math.ceil(filtered.length / perPage));
   const currentPage = Math.min(page, pageCount);
   const visible = filtered.slice((currentPage - 1) * perPage, currentPage * perPage);
+  const activeFilterCount = selectedBrands.length + (technology === "All" ? 0 : 1) + (search.trim() ? 1 : 0);
 
   function resetFilters() {
     setSearch("");
@@ -116,7 +117,11 @@ export function ProductCatalog({ products }: { products: AsperaProduct[] }) {
   return (
     <section className="shop section">
       <aside className="filters">
-        <h3>Find radios</h3>
+        <div className="filters-head">
+          <span>Catalog filters</span>
+          <strong>{activeFilterCount}</strong>
+        </div>
+        <h3>Search products</h3>
         <div className="search-row">
           <input
             placeholder="Search for products"
@@ -130,7 +135,7 @@ export function ProductCatalog({ products }: { products: AsperaProduct[] }) {
           <button type="button" onClick={() => setPage(1)}>Search</button>
         </div>
 
-        <h3>Brands</h3>
+        <h3>Choose brands</h3>
         <div className="checkbox-list" aria-label="Brand filters">
           {brands.map((item) => (
             <label key={item}>
@@ -161,9 +166,10 @@ export function ProductCatalog({ products }: { products: AsperaProduct[] }) {
 
       <div className="listing" id="product-results">
         <div className="listing-top">
-          <p>
-            Showing <strong>{visible.length}</strong> of <strong>{filtered.length}</strong> results
-          </p>
+          <div>
+            <p className="listing-kicker">Product results</p>
+            <h2>Showing {visible.length} of {filtered.length} products</h2>
+          </div>
           <div className="listing-controls">
             <select aria-label="Sort products" value={sort} onChange={(event) => setSort(event.target.value)}>
               <option value="featured">Featured</option>
@@ -185,7 +191,11 @@ export function ProductCatalog({ products }: { products: AsperaProduct[] }) {
                   <img src={item.image} alt={item.name} />
                   <h3>{item.name}</h3>
                 </a>
-                <p>{item.brand} · {item.technology}</p>
+                <div className="catalog-tags">
+                  <span>{item.brand}</span>
+                  <span>{item.technology}</span>
+                </div>
+                <p>{item.summary}</p>
                 <a className="catalog-action" href={`/products/${item.slug}/`}>View Specs</a>
               </article>
             ))}
@@ -193,7 +203,7 @@ export function ProductCatalog({ products }: { products: AsperaProduct[] }) {
         ) : (
           <div className="empty-results">
             <h3>No products found</h3>
-            <p>Try a different brand, category, technology, or price range.</p>
+            <p>Try a different search, brand, or radio type.</p>
             <button type="button" onClick={resetFilters}>Clear filters</button>
           </div>
         )}
