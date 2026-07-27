@@ -203,6 +203,14 @@ type WordPressPost = {
   excerpt?: { rendered?: string };
   content?: { rendered?: string };
   date?: string;
+  featured_image?: string;
+  jetpack_featured_media_url?: string;
+  post_thumbnail?: {
+    URL?: string;
+  };
+  better_featured_image?: {
+    source_url?: string;
+  };
   _embedded?: {
     "wp:featuredmedia"?: Array<{
       source_url?: string;
@@ -246,7 +254,14 @@ function getCategory(post: WordPressPost) {
 }
 
 function getFeaturedImage(post: WordPressPost) {
-  return post._embedded?.["wp:featuredmedia"]?.[0]?.source_url || "/images/sec2-rt-img-transparent.png";
+  return (
+    post._embedded?.["wp:featuredmedia"]?.[0]?.source_url ||
+    post.jetpack_featured_media_url ||
+    post.featured_image ||
+    post.post_thumbnail?.URL ||
+    post.better_featured_image?.source_url ||
+    "/images/sec2-rt-img-transparent.png"
+  );
 }
 
 function estimateReadTime(content: string) {
