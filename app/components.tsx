@@ -38,18 +38,35 @@ export function PageBanner({ title, image }: { title: string; image: string }) {
 
 export function InquiryForm({ dark = false }: { dark?: boolean }) {
   return (
-    <form className={dark ? "inquiry-card dark-form" : "inquiry-card"}>
-      <p className="eyebrow">Contact Us</p>
-      <h2>Inquiry Form</h2>
-      <div className="form-grid">
-        <input placeholder="Your Name" aria-label="Your Name" />
-        <input placeholder="Your Email" aria-label="Your Email" type="email" />
-        <input placeholder="Phone Number" aria-label="Phone Number" />
-        <input placeholder="Company" aria-label="Company" />
-        <textarea placeholder="Message" aria-label="Message" rows={4} />
-      </div>
-      <button type="button">Ask a question</button>
-    </form>
+    <div className={dark ? "inquiry-wrap dark-form" : "inquiry-wrap"}>
+      {dark ? (
+        <div className="inquiry-copy">
+          <p className="eyebrow">Talk to a radio specialist</p>
+          <h2>Tell us your site. We will suggest the right communication setup.</h2>
+          <p>
+            Share your team size, location type, and coverage needs. We can help compare handheld radios, repeaters,
+            license-free PMR446 options, PoC devices, and accessories.
+          </p>
+          <div className="inquiry-points">
+            <span>Fast product shortlisting</span>
+            <span>Delhi and Mumbai support</span>
+            <span>Multi-brand guidance</span>
+          </div>
+        </div>
+      ) : null}
+      <form className="inquiry-card">
+        <p className="eyebrow">Contact Us</p>
+        <h2>Inquiry Form</h2>
+        <div className="form-grid">
+          <input placeholder="Your Name" aria-label="Your Name" />
+          <input placeholder="Your Email" aria-label="Your Email" type="email" />
+          <input placeholder="Phone Number" aria-label="Phone Number" />
+          <input placeholder="Company" aria-label="Company" />
+          <textarea placeholder="Tell us what you need" aria-label="Message" rows={4} />
+        </div>
+        <button type="button">Request recommendation</button>
+      </form>
+    </div>
   );
 }
 
