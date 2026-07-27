@@ -432,7 +432,7 @@ footer button {
 
 .product-grid {
   display: grid;
-  gap: 26px;
+  gap: 22px;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   margin-top: 34px;
 }
@@ -468,23 +468,24 @@ footer button {
   border-radius: 8px;
   box-shadow: 0 16px 42px rgba(31, 47, 70, 0.08);
   display: grid;
-  gap: 18px;
-  grid-template-columns: 150px 1fr;
-  min-height: 190px;
-  padding: 24px;
+  gap: 20px;
+  grid-template-columns: 1fr;
+  min-height: 360px;
+  padding: 18px 18px 24px;
   position: relative;
   transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
 }
 
 .product-card::after {
-  background: linear-gradient(180deg, var(--teal), var(--blue));
+  background: linear-gradient(90deg, var(--teal), var(--blue));
   border-radius: 999px;
   content: "";
-  height: calc(100% - 40px);
-  left: 0;
+  height: 4px;
+  left: 18px;
   position: absolute;
-  top: 20px;
-  width: 4px;
+  right: 18px;
+  top: 0;
+  width: auto;
 }
 
 .product-card:hover,
@@ -497,10 +498,10 @@ footer button {
 
 .product-card img {
   border-radius: 8px;
-  height: 142px;
+  height: clamp(190px, 15vw, 230px);
   object-fit: cover;
   object-position: center;
-  width: 150px;
+  width: 100%;
 }
 
 .product-fallback {
@@ -511,10 +512,10 @@ footer button {
   display: flex;
   font-size: 30px;
   font-weight: 800;
-  height: 142px;
+  height: clamp(190px, 15vw, 230px);
   justify-content: center;
   letter-spacing: 0;
-  width: 150px;
+  width: 100%;
 }
 
 .product-card h3 {
