@@ -101,10 +101,14 @@ export default async function Home() {
       </section>
 
       <section className="section product-showcase">
-        <div className="section-heading-row">
+        <div className="product-showcase-head">
           <div>
             <p className="eyebrow">Communication categories</p>
-            <h2>Build the right radio mix.</h2>
+            <h2>Build the right radio mix for your team.</h2>
+            <p>
+              Compare the main communication options before choosing a model: license-free radios, digital fleets,
+              PoC devices, Wi-Fi radios, and specialist accessories.
+            </p>
           </div>
           <a className="outline-button" href="/products/">Open full catalog</a>
         </div>
