@@ -9,6 +9,14 @@ const navItems = [
   ["Contact us", "/contactus/"],
 ];
 
+const footerProducts = [
+  ["Digital Radios", "/products/"],
+  ["License-Free Radios", "/products/"],
+  ["Repeaters", "/products/"],
+  ["Aviation Radios", "/products/"],
+  ["Accessories", "/products/"],
+];
+
 export function Header() {
   return (
     <header className="site-header">
@@ -110,37 +118,50 @@ export function BrandStrip() {
 export function Footer() {
   return (
     <footer>
-      <div className="footer-grid">
+      <div className="footer-cta">
         <div>
+          <p className="eyebrow">Need a radio recommendation?</p>
+          <h2>Send your site details and we will help shortlist the right setup.</h2>
+        </div>
+        <a className="text-button" href="/contactus/">Contact Electrosonic</a>
+      </div>
+      <div className="footer-grid">
+        <div className="footer-brand">
           <img src="/images/footer-logo.png" alt="ElectroSonic" width={190} height={62} />
           <p>
-            We as a company are built on sincerity, courage and a will to achieve, offering communication systems,
-            services and knowledge-led product guidance.
+            Electrosonic Technologies supplies and supports practical communication systems for businesses, security
+            teams, warehouses, hotels, schools, event teams, and industrial sites.
           </p>
         </div>
         <div>
-          <h3>Useful Links</h3>
+          <h3>Company</h3>
           {navItems.map(([item, href]) => <a key={item} href={href}>{item}</a>)}
           <a href="/iso_certificate.pdf">Our ISO Certificate</a>
         </div>
         <div>
-          <h3>Newsletter</h3>
-          <p>Sign up your Newsletter</p>
-          <input type="email" placeholder="Email Address" aria-label="Newsletter email" />
-          <button type="button">Subscribe</button>
+          <h3>Product Lines</h3>
+          {footerProducts.map(([item, href]) => <a key={item} href={href}>{item}</a>)}
         </div>
         <div>
           <h3>Contact Us</h3>
           <a href="mailto:info@electrosonictech.com">info@electrosonictech.com</a>
           <a href="tel:+919990696931">+91 99906-96931</a>
-          <div className="socials" aria-label="Social links">
-            <span>f</span>
-            <span>ig</span>
-            <span>wa</span>
+          <p>
+            Delhi: Devika Tower, Nehru Place
+            <br />
+            Mumbai: Goregaon, Maharashtra
+          </p>
+          <div className="footer-badges">
+            <span>Delhi</span>
+            <span>Mumbai</span>
+            <span>India</span>
           </div>
         </div>
       </div>
-      <p className="copyright">Copyright © 2025 Electrosonic Technology . All Rights Reserved</p>
+      <div className="footer-bottom">
+        <p>Copyright © 2026 Electrosonic Technologies Pvt Ltd. All rights reserved.</p>
+        <p>Communication systems, radios, repeaters, PoC devices and accessories.</p>
+      </div>
     </footer>
   );
 }
