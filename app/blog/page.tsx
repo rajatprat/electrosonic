@@ -21,7 +21,7 @@ export default async function BlogPage() {
           {blogPosts.map((post) => (
             <article key={post.slug} className="journal-card">
               <a className="journal-image" href={`/blog/${post.slug}/`}>
-                <span>Electrosonic Journal</span>
+                <span>Radio Journal</span>
                 <img src={post.image} alt="" />
               </a>
               <div className="journal-card-body">

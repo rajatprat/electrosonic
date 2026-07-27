@@ -21,23 +21,28 @@ export const blogPosts: BlogPost[] = [
     date: "24 Jul 2026",
     readTime: "5 min read",
     excerpt:
-      "A practical framework for choosing radios by range, battery, audio, accessories, and site conditions.",
+      "How instant push-to-talk communication helps warehouse and logistics teams reduce waiting, mispicks, and loading-bay delays.",
     image: "/images/sec2-rt-img-transparent.png",
     sections: [
       {
         heading: "Start with the workplace, not the model number",
         body:
-          "The right radio depends on where your team works. A hotel floor, warehouse, outdoor event, shopping mall, security route, and construction site all need different coverage, audio, and battery decisions.",
+          "A warehouse can look organised and still lose time in small gaps: a picker waiting for confirmation, a forklift operator stuck at a blind corner, or dispatch searching for one missing carton. Walkie-talkies help because they make quick questions truly quick. Someone asks, someone answers, and the job keeps moving.",
       },
       {
-        heading: "Check licensing and channels early",
+        heading: "Forklift and aisle coordination becomes simpler",
         body:
-          "License-free PMR446 radios are convenient for many teams, while larger or more controlled operations may need digital radios, repeaters, or PoC devices. Choosing this early avoids buying radios that cannot scale.",
+          "Forklifts create stop-start movement when teams cannot see around racks, cages, pallets, and loading areas. A short voice call can confirm right of way, warn others before entering a tight aisle, or flag a blocked route before it turns into a queue. Better communication does not replace safe procedures; it helps people follow them faster.",
       },
       {
-        heading: "Match accessories to the job",
+        heading: "Loading bays are where minutes vanish",
         body:
-          "Earpieces, speaker microphones, spare batteries, multi-chargers, belt clips, and programming cables often matter as much as the radio itself. A good kit reduces downtime during busy shifts.",
+          "Dispatch often slows down because one person is trying to find the last item, confirm paperwork, and manage a waiting vehicle. With radios, the work can be split instantly between goods-in, picking, dispatch, and lift operators. A simple communication structure can stop a five-minute problem from becoming a twenty-minute delay.",
+      },
+      {
+        heading: "The right setup is more than the handset",
+        body:
+          "Warehouse teams usually need earpieces for noisy zones, speaker microphones for hands-busy roles, spare batteries, and multi-chargers for rotating shifts. The best radio kit is the one that survives the day-to-day rhythm of the site and is easy for every shift to use consistently.",
       },
     ],
   },
@@ -48,23 +53,28 @@ export const blogPosts: BlogPost[] = [
     date: "24 Jul 2026",
     readTime: "4 min read",
     excerpt:
-      "Digital radio is not only about clearer voice. It can improve privacy, fleet control, battery life, and future expansion.",
+      "The avoidable buying mistakes that leave teams with poor range, weak batteries, noisy audio, or radios that cannot scale.",
     image: "/images/homepage-slider/slider-img2.jpg",
     sections: [
       {
-        heading: "Digital improves control",
+        heading: "Choosing only by price",
         body:
-          "Digital systems can support individual calls, group calls, emergency functions, remote stun or kill, text/status messages, and better fleet visibility depending on the radio family.",
+          "The cheapest radio can become expensive when it fails during a busy shift. Range, battery life, build quality, warranty support, and accessory availability matter more than the first purchase price. A business radio should be judged by how reliably it performs across months of daily use.",
       },
       {
-        heading: "Audio and battery gains matter",
+        heading: "Ignoring the real coverage area",
         body:
-          "Modern digital radios often include stronger noise handling and power management. For security teams, operations teams, and loud workplaces, the difference is practical rather than cosmetic.",
+          "Many teams test radios in an open room and then discover dead spots in basements, service corridors, metal racks, or outdoor yards. Before buying, map the actual site: floors, walls, lifts, loading bays, stairwells, and the furthest point where the team must stay connected.",
       },
       {
-        heading: "Migration can be gradual",
+        heading: "Skipping durability and accessories",
         body:
-          "Many products support mixed analog and digital operation, which lets teams migrate in phases while keeping existing radios useful during the transition.",
+          "A radio is only useful if the full kit works. Dust resistance, water resistance, belt clips, earpieces, speaker microphones, spare batteries, and multi-chargers all decide how smoothly the fleet works in real life. Accessories should be planned with the radios, not treated as an afterthought.",
+      },
+      {
+        heading: "Not thinking about future team size",
+        body:
+          "A small team may start with license-free radios, but growth can bring more channels, groups, repeaters, or PoC requirements. Choosing a system that can expand avoids replacing everything when the operation becomes larger or more complex.",
       },
     ],
   },
@@ -75,23 +85,28 @@ export const blogPosts: BlogPost[] = [
     date: "24 Jul 2026",
     readTime: "6 min read",
     excerpt:
-      "Understand where handheld radios, repeater-backed networks, mobile units, and LTE push-to-talk devices fit best.",
+      "Why event teams depend on fast voice coordination across gates, stage areas, security posts, vendors, and operations desks.",
     image: "/images/product-banner.jpg",
     sections: [
       {
-        heading: "Handheld radios are best for direct team coordination",
+        heading: "Events need role-based communication",
         body:
-          "For hotels, restaurants, retail, events, and site teams, handheld walkie talkies are simple, fast, and easy to train. They work especially well when the team is inside a defined operating area.",
+          "Ordering one radio for every person is rarely the best plan. Event managers, gate leads, security posts, stage teams, parking leads, hospitality teams, and vendor coordinators need communication based on decision points. Radios should support the people who need to act quickly.",
       },
       {
-        heading: "Repeaters extend coverage",
+        heading: "Channels keep the day calm",
         body:
-          "Repeaters help when teams need communication across larger buildings, industrial areas, basements, multi-floor properties, or spread-out campuses.",
+          "A shared channel can become noisy during a busy event. Separating operations, security, parking, and production teams keeps routine updates away from urgent messages. Clear channel planning makes the radio system feel simple on the day.",
       },
       {
-        heading: "PoC and LTE work across distance",
+        heading: "Battery planning avoids mid-event silence",
         body:
-          "Push-to-talk over cellular is useful when team members are spread across cities or need wide-area coverage without building radio infrastructure.",
+          "Long events need spare batteries, multi-chargers, and a planned charging point. The radio fleet should be checked before gates open, with enough charged equipment for late shifts, backup staff, and emergency roles.",
+      },
+      {
+        heading: "Range should be tested before the crowd arrives",
+        body:
+          "Stages, metal barriers, basements, temporary structures, and crowd density can affect coverage. A site walk before the event helps decide whether standard handhelds are enough or whether repeaters, higher-grade radios, or PoC devices are needed.",
       },
     ],
   },

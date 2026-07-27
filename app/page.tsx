@@ -152,7 +152,7 @@ export default async function Home() {
           {blogPosts.slice(0, 3).map((post) => (
             <article key={post.title} className="journal-card">
               <a className="journal-image" href={`/blog/${post.slug}/`}>
-                <span>Electrosonic Journal</span>
+                <span>Radio Journal</span>
                 <img src={post.image} alt="" />
               </a>
               <div className="journal-card-body">
